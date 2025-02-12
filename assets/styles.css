@@ -42,6 +42,14 @@ body {
     background-color: #ead6d0b3;
 }
 
+.button__negative {
+    position: absolute;
+    left: 50%;  /* Start near the center */
+    top: 60%;   /* Start slightly below the 'ΝΑΙ' button */
+    transform: translateX(-50%); /* Center alignment */
+    transition: all 0.3s ease-in-out;
+}
+
 .title {
     font-size: 34px;
     color: #AA1B2D;
