@@ -5,7 +5,7 @@ const alternatives = [
     {text:"Τελευταία σου ευκαιρία", images:"./assets/images/4.gif"},
 ];
 
-const ohyes = {text:"Το ήξερα ότι θα πείς ΝΑΙ! <3 (ΣΕ ΑΓΑΠΑΩ ΠΟΛΥ)", images:"./assets/images/yes.gif"};
+const ohyes = {text:"Το ήξερα ότι θα πεις ΝΑΙ <3 (ΣΕ ΑΓΑΠΩ ΠΟΛΥ)", images:"./assets/images/yes.gif"};
 const title = document.querySelector('.title');
 const text = document.querySelector('.text');
 const cat = document.querySelector('.cat');
@@ -33,13 +33,17 @@ buttons.forEach(button => {
             buttons.forEach(btn => btn.style.display = 'none');
         }
         if (button.textContent === 'ΟΧΙ'){
-            count++;
-            if(count < alternatives.length){
-                updateDisplay(alternatives[count]);
-            } else {
-                buttons.forEach(btn => btn.style.display = 'none');
-                errorButton.style.display = 'inline-block';
-            }
+            let maxWidth = window.innerWidth - button.clientWidth;
+            let maxHeight = window.innerHeight - button.clientHeight;
+
+            // Generate random X and Y positions within the viewport
+            let randomX = Math.floor(Math.random() * maxWidth);
+            let randomY = Math.floor(Math.random() * maxHeight);
+
+            // Apply the new position
+            button.style.left = `${randomX}px`;
+            button.style.top = `${randomY}px`;
         }
     });
 });
+
