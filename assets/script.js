@@ -5,7 +5,7 @@ const alternatives = [
     {text:"Τελευταία σου ευκαιρία", images:"./assets/images/4.gif"},
 ];
 
-const ohyes = {text:"Το ήξερα ότι θα πείς ΝΑΙ! <3 ( ΣΕ ΑΓΑΠΑΩ ΠΟΛΥ )", images:"./assets/images/yes.gif"};
+const ohyes = {text:"Το ήξερα ότι θα πείς ΝΑΙ! <3 (ΣΕ ΑΓΑΠΑΩ ΠΟΛΥ)", images:"./assets/images/yes.gif"};
 const title = document.querySelector('.title');
 const text = document.querySelector('.text');
 const cat = document.querySelector('.cat');
